@@ -31,7 +31,7 @@ i=find(pointst);
 
 totalx=[]; totaly=[];
 % Loop to make points evenly spaced on line pieces between landmark points
-for j=1:length(i)-1,
+for j=1:length(i)-1
     % One line piece
     linex=pointsx(i(j):i(j+1));
     liney=pointsy(i(j):i(j+1));
@@ -44,7 +44,7 @@ for j=1:length(i)-1,
     linex=interp1(dist,linex,dist2);
     liney=interp1(dist,liney,dist2);
     % Display the line piece
-    if(verbose),
+    if(verbose)
         plot(liney,linex,'g*');
         plot(liney(1),linex(1),'r*');
         plot(liney(end),linex(end),'r*'); 

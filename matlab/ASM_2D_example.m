@@ -74,7 +74,7 @@ end
 % Make the Shape model, which finds the variations between contours
 % in the training data sets. And makes a PCA model describing normal
 % contours
-[ShapeData TrainingData]= ASM_MakeShapeModel2D(TrainingData);
+[ShapeData,TrainingData]= ASM_MakeShapeModel2D(TrainingData);
   
 % Show some eigenvector variations
 if(options.verbose)
